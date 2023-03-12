@@ -10,16 +10,16 @@ namespace ConsoleApp13
     {
         static void Main(string[] args)
         {
-            int[] array = new int[12];
+            Console.Write("n=");
+            byte n = byte.Parse(Console.ReadLine());
+            double[] array = new double[n];
             Random rnd = new Random();
-            for (int i = 0; i < 12; i++)
+            for (int i = 0; i < array.Length; i++)
             {
-                array[i] = rnd.Next(163, 190);
+                array[i] = -50 + 100 * rnd.NextDouble();
+                Console.WriteLine($"array [{i}]) ={array[i]}");
             }
-            for (int i = 0; i < 12; i++)
-            {
-                Console.WriteLine($"array[{i}]={array[i]}");
-            }
+            Console.WriteLine($"array[0] = {array[0]}\tarray[{array.Length - 1}]={array[array.Length - 1]}");
         }
     }
 }
