@@ -10,19 +10,20 @@ namespace ConsoleApp13
     {
         static void Main(string[] args)
         {
-            int[] array = new int[] { 74, 0, 50, 46, 34, 46, 0, 13 };
-            foreach (int element in array)
+            //Задача 1. Заполнить одномерный массив с клавиатуры шестью целыми числами. Вывести одномерный массив в обратном порядке.
+            
+            int[] array = new int[6];
+            for(int i = 0; i < array.Length; i++)
             {
-                Console.WriteLine(element);
+                Console.Write($"array[{i}]= ");    
+                array[i] = int.Parse(Console.ReadLine());      
             }
-            int[] arrayy = new int[] { 13, 0, 50, 46, 34, 46, 0, 74 };
-            foreach (int element in array)
-            {
-                Console.WriteLine(element);
-                int result = element * element;
-                Console.WriteLine(result);
-            }
-            Console.ReadKey();
+            for (int i = array.Length-1; i>=0; i--)
+              {
+                Console.WriteLine($"array[{i}]= {array[i]}");
+                    }
+           Console.Read();
+            
         }
     }
 }
